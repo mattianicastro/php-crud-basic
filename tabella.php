@@ -10,10 +10,9 @@
 </head>
 
 <?php
-    $conn = mysqli_connect("localhost", "root", "","agenda")
-    or die("Errore: ".mysqli_connect_error());
+    require 'db.php';
     $query = "SELECT * FROM rubrica";
-    $res = mysqli_query($conn, $query);
+    $res = $conn->query($query)
 ?>
 <body data-bs-theme="dark" class="container-xl">
 <div class="d-flex flex-column">
